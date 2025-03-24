@@ -1,0 +1,36 @@
+<!-- filepath: c:\Users\Administrator\Desktop\Rina_D\myproject\myproject\templates\layout.html -->
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+            My Project
+        {% endblock %}
+    </title>
+    <!-- Add your CSS files here -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/main.js' %}" defer></script>
+</head>
+<body>
+    
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/post">Post</a>
+    </nav>
+
+    <!-- Main Content Section -->
+    <main>
+        {% block content %}
+        <!-- Content will be injected here -->
+        {% endblock %}
+    </main>
+
+    <!-- Footer Section -->
+   
+    
+</body>
+</html>
